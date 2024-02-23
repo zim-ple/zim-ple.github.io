@@ -5,9 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Horror Games on PC I think you would like by zahid ik munoz rojano</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .crt-screen {
+            position: relative;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('4x-scanlines-19-moshed-02-23-00-04-09.gif') center center no-repeat; /* Replace 'your-gif.gif' with the path to your GIF */
+            background-size: cover;
+            pointer-events: none; /* Allows clicks to pass through the overlay */
+            z-index: 2; /* Place the overlay above the video and other content */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Ensure the video is below the overlay */
+        }
+
+        h1, .game-list {
+            z-index: 3; /* Ensure the text is on top of the video and overlay */
+            position: relative; /* Ensure text is positioned relative to its containing element */
+        }
+
+        .game-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+            color: white;
+            position: relative; /* Ensure the list is positioned relative to its containing element */
+            z-index: 3; /* Ensure the list is on top of the video and overlay */
+        }
+
+        .game-list li {
+            margin-bottom: 10px;
+        }
+
+        .game-list a {
+            text-decoration: none;
+            color: #00ff00; 
+            font-weight: bold;
+        }
+
+        .game-list a:hover {
+            color: #00ff00; 
+        }
+    </style>
 </head>
 <body>
     <div class="crt-screen">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop>
+            <source src="your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <h1>Horror Games on PC I think you would like by zahid:) </h1>
         <ul class="game-list">
             <li><a href="milk_inside_a_bag.html">Milk Inside a Bag of Milk Inside a Bag of Milk</a></li>
@@ -18,6 +83,7 @@
             <li><a href="omori.html">OMORI</a></li>
             <li><a href="Little_Nightmares.html">Little Nightmares</a></li>
             <li><a href="sally_face.html">Sally Face EP.1-5</a></li>
+            <!-- Add more game links as needed -->
         </ul>
     </div>
 </body>
